@@ -8,7 +8,6 @@ int	ft_recursive_factorial(int nb)
 		nb = 1;
 	else
 	{	
-		--nb;
 		nb = nb * ft_recursive_factorial(nb - 1);
 	}
 	return (nb);
