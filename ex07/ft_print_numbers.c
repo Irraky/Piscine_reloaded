@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drecours <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 09:54:08 by drecours          #+#    #+#             */
-/*   Updated: 2016/11/14 12:55:02 by drecours         ###   ########.fr       */
+/*   Created: 2016/11/05 13:50:13 by drecours          #+#    #+#             */
+/*   Updated: 2016/11/12 16:34:47 by drecours         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_putstr(char *str)
+void	ft_print_numbers(void)
 {
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (i <= 9)
 	{
-		ft_putchar(str[i]);
+		ft_putchar(i + 48);
 		++i;
 	}
 }

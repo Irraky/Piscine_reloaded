@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drecours <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 09:54:08 by drecours          #+#    #+#             */
-/*   Updated: 2016/11/14 12:55:02 by drecours         ###   ########.fr       */
+/*   Created: 2016/11/07 11:43:56 by drecours          #+#    #+#             */
+/*   Updated: 2016/11/12 17:04:36 by drecours         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int i;
+	int c;
+	int d;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		++i;
-	}
+	c = a;
+	d = b;
+	*div = a / b;
+	*mod = c % d;
 }

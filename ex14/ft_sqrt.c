@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drecours <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 09:54:08 by drecours          #+#    #+#             */
-/*   Updated: 2016/11/14 12:55:02 by drecours         ###   ########.fr       */
+/*   Created: 2016/11/07 11:37:37 by drecours          #+#    #+#             */
+/*   Updated: 2016/11/14 16:29:14 by drecours         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+int		ft_sqrt(int nb)
 {
 	int i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
+	i = 1;
+	if (nb <= 0)
+		return (0);
+	while (i * i < nb)
 		++i;
-	}
+	if (i * i == nb)
+		return (i);
+	else
+		return (0);
 }

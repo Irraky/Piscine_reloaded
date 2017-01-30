@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   truc.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drecours <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 09:54:08 by drecours          #+#    #+#             */
-/*   Updated: 2016/11/14 12:55:02 by drecours         ###   ########.fr       */
+/*   Created: 2016/11/14 12:23:32 by drecours          #+#    #+#             */
+/*   Updated: 2016/11/14 12:59:10 by drecours         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#ifndef TRUC_H
+# define TRUC_H
 
-void	ft_putstr(char *str)
-{
-	int i;
+# include <unistd.h>
+# include <fcntl.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		++i;
-	}
-}
+#endif

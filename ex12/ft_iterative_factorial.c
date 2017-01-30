@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drecours <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 09:54:08 by drecours          #+#    #+#             */
-/*   Updated: 2016/11/14 12:55:02 by drecours         ###   ########.fr       */
+/*   Created: 2016/11/07 11:33:27 by drecours          #+#    #+#             */
+/*   Updated: 2016/11/12 17:21:27 by drecours         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+int		ft_iterative_factorial(int nb)
 {
 	int i;
 
-	i = 0;
-	while (str[i] != '\0')
+	i = nb;
+	nb = 1;
+	if (i < 0 || i > 12)
+		return (0);
+	if (i == 0)
+		return (1);
+	while (i != 0)
 	{
-		ft_putchar(str[i]);
-		++i;
+		nb = nb * i;
+		--i;
 	}
+	return (nb);
 }

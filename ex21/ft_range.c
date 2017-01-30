@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drecours <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 09:54:08 by drecours          #+#    #+#             */
-/*   Updated: 2016/11/14 12:55:02 by drecours         ###   ########.fr       */
+/*   Created: 2016/11/10 18:12:16 by drecours          #+#    #+#             */
+/*   Updated: 2016/11/14 11:40:21 by drecours         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdlib.h>
 
-void	ft_putstr(char *str)
+int		*ft_range(int min, int max)
 {
+	int *sapin;
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (min >= max)
+		return (0);
+	sapin = (int *)malloc(sizeof(int) * (max - min));
+	while (min != max)
 	{
-		ft_putchar(str[i]);
+		sapin[i] = min;
+		++min;
 		++i;
 	}
+	return (sapin);
 }
